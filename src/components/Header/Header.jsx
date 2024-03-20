@@ -1,5 +1,6 @@
 import "./header.css"
 import { DateRange } from 'react-date-range';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
@@ -8,8 +9,8 @@ import { format } from 'date-fns'
 export default function Header(props) {
 
     const [openDate, setOpenDate] = useState(false)
-
-    const [state, setState] = useState([
+    const [destination,setDestination] = useState("")
+    const [date, setState] = useState([
         {
             startDate: new Date(),
             endDate: new Date(),
@@ -23,6 +24,8 @@ export default function Header(props) {
         room: 1
     })
 
+    const  navigate = useNavigate()
+
     const handleOption = (name, operation) => {
         setOptions((prev) => {
           return {
@@ -31,6 +34,10 @@ export default function Header(props) {
           };
         });
       };
+      
+      const handleSearch = ()=>{
+            navigate("/hotels", {state:{destination,date,options}})
+      }
 
     return (
         <div>
@@ -56,21 +63,21 @@ export default function Header(props) {
                     {props.type!=="list" &&
                         <><h1 className="headertitle">A lifetime of discounts ? Its Genius</h1>
                     <p className="headerDesc">
-                        Get rewareded for your travels - unlock instant savings of 10% or more with a free booking account
+                        Get rewarded for your travels - unlock instant savings of 10% or more with a free booking account
                     </p>
                     <button className="headerButton"> Sign In / Register</button>
                     <div className="headerSearch">
                         <div className="headerSearchItem">
-                            <input type="text" placeholder="Where are you going?" className="headerSearchInput" />
+                            <input type="text" placeholder="Where are you going?" className="headerSearchInput" onChange={e=>setDestination(e.target.value)} />
                         </div>
                         <div className="headerSearchItem">
-                            <span onClick={() => setOpenDate(!openDate)} className="headetSearchtext">{`${format(state[0].startDate, "mm/dd/yyyy")} to ${format(state[0].endDate, "mm/dd/yyyy")}`}</span>
+                            <span onClick={() => setOpenDate(!openDate)} className="headetSearchtext">{`${format(date[0].startDate, "dd/mm/yyyy")} to ${format(date[0].endDate, "dd/mm/yyyy")}`}</span>
 
                             {openDate && <DateRange
                                 editableDateInputs={true}
                                 onChange={item => setState([item.selection])}
                                 moveRangeOnFirstSelection={false}
-                                ranges={state}
+                                ranges={date}
                                 className="date"
                             />}                </div>
                         <div className="headerSearchItem">
@@ -142,7 +149,7 @@ export default function Header(props) {
                             </div>}
                         </div>
                         <div className="headerSearchItem">
-                            <button className="headerButton"> Search</button>
+                            <button className="headerButton" onClick={handleSearch}> Search</button>
                         </div>
 
                     </div></>}
