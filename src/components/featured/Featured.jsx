@@ -6,24 +6,31 @@ export default function Featured() {
     <div>
       <div className="featured">
         <div className="featuredItem">
-            <img src="australia.jpg" alt="" className='featuredImg'/>
+            <img src="syd.jpg" alt="" className='featuredImg'/>
             <div className="featuredTitles">
-                <h1>Australia</h1>
-                <h2>123 Properties</h2>
+                <h1>&nbsp;Australia</h1>
+                <h2>&nbsp;999+ Properties</h2>
             </div>
         </div>
         <div className="featuredItem">
-            <img src="nyc.jpg" alt="" className='featuredImg'/>
+            <img src="new.jpg" alt="" className='featuredImg'/>
             <div className="featuredTitles">
-                <h1>New York City</h1>
-                <h2>123 Properties</h2>
+                <h1>&nbsp;New York City</h1>
+                <h2>&nbsp;550+ Properties</h2>
             </div>
         </div>
         <div className="featuredItem">
-            <img src="hungary.jpg" alt="" className='featuredImg'/>
+            <img src="hun.jpg" alt="" className='featuredImg'/>
             <div className="featuredTitles">
-                <h1>Hungary</h1>
-                <h2>123 Properties</h2>
+                <h1>&nbsp;Hungary</h1>
+                <h2>&nbsp;750+ Properties</h2>
+            </div>
+        </div>
+        <div className="featuredItem">
+            <img src="gate.jpg" alt="" className='featuredImg'/>
+            <div className="featuredTitles">
+                <h1>&nbsp;India</h1>
+                <h2>&nbsp;15000+ Properties</h2>
             </div>
         </div>
       </div>
