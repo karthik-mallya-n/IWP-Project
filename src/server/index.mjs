@@ -26,7 +26,24 @@ async function main() {
         res.json({ error: "An error occurred" });
       });
   });
-  app.delete 
+
+  app.post("/hotel", (req, res) => {
+    prisma.hotel
+      .create({
+        data: {
+          name: "Hotel 1",
+          location: "Location 1",
+          rating: 4,
+        },
+      })
+      .then((hotel) => {
+        res.json(hotel);
+      })
+      .catch((error) => {
+        res.json({ error: "An error occurred" });
+      });
+  });
+
   app.listen(3000, () => {
     console.log("Server is running on port 3000");
   });

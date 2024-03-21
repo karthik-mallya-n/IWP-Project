@@ -22,3 +22,15 @@ model user {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model hotel{
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  address     String
+  phone       String
+  email       String
+  website     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
