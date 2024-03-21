@@ -8,28 +8,28 @@ export default function Property() {
             <img src="hotes.jpg" alt="" className="pListImg" />
             <div className="pListTitles">
                 <h1>Hotels</h1>
-                <h2>123 properties</h2>
+                <h2>250+ properties</h2>
             </div>
         </div>
         <div className="pListItem">
             <img src="resort.jpg" alt="" className="pListImg" />
             <div className="pListTitles">
                 <h1>Resorts</h1>
-                <h2>123 properties</h2>
+                <h2>200+ properties</h2>
             </div>
         </div>
         <div className="pListItem">
             <img src="villa.jpg" alt="" className="pListImg" />
             <div className="pListTitles">
                 <h1>Villas</h1>
-                <h2>123 properties</h2>
+                <h2>150+ properties</h2>
             </div>
         </div>
         <div className="pListItem">
             <img src="cabin.jpg" alt="" className="pListImg" />
             <div className="pListTitles">
                 <h1>Cabin</h1>
-                <h2>123 properties</h2>
+                <h2>50+ properties</h2>
             </div>
         </div>
       </div>

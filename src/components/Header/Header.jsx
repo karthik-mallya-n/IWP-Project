@@ -81,7 +81,7 @@ export default function Header(props) {
                                 className="date"
                             />}                </div>
                         <div className="headerSearchItem">
-                            <span onClick={() =>setOpenOptions(!openOptions)} className="headetSearchtext">{`${options.adult} . adult ${options.children} . children ${options.room} . room`} </span>
+                            <span onClick={() =>setOpenOptions(!openOptions)} className="headetSearchtext">{`${options.adult} - adult  {'\t'} ${options.children} - children ${options.room} - room`} </span>
                             {openOptions && <div className="options">
                                 <div className="optionItem">
                                     <span className="optionText">Adult</span>

@@ -39,3 +39,9 @@
 .fpRating>span{
     font-size: 14px;
 }
+
+img{
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+}

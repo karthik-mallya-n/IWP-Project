@@ -1,7 +1,8 @@
 .homeContainer{
     margin-top: 50px;
     display: flex;
-    
+    overflow-x: hidden;
+
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -11,3 +12,4 @@
     width: 1024px;
     font-size: 20px;
 }
+
